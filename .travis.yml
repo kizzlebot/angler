@@ -1,0 +1,17 @@
+---
+language: node_js
+node_js:
+  - '6'
+  - '5'
+  - '4'
+before_install:
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
+before_script:
+  - npm install -g gulp
+cache:
+  directories:
+    - node_modules
+notifications:
+  slack: flexshopper:E1U7qVGEIWZua9AtCQfr4jNl#kraken-builds
+env:
+  - NPM_TOKEN="a1110e57-df1c-455a-9eb3-b05b8edbe323"
